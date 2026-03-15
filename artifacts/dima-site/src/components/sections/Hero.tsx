@@ -22,7 +22,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-gradient leading-[1.15] mb-4 sm:mb-6"
+          className="text-lg sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-gradient leading-[1.15] mb-4 sm:mb-6"
         >
           Dima Vardzelashvili
         </motion.h1>
