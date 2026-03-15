@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center pt-24 overflow-hidden">
+    <section className="relative flex items-center justify-center pt-28 pb-16 overflow-hidden">
       {/* Background glow effects specific to hero */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-600/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
@@ -22,7 +22,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-6xl md:text-8xl lg:text-9xl font-display font-bold text-gradient leading-[1.1] mb-6"
+          className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-gradient leading-[1.1] mb-6"
         >
           Dima <br/>
           Vardzelashvili
@@ -52,16 +52,6 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-      >
-        <span className="text-xs text-white/40 uppercase tracking-widest">Scroll</span>
-        <div className="w-px h-12 bg-gradient-to-b from-white/40 to-transparent" />
-      </motion.div>
     </section>
   );
 }
