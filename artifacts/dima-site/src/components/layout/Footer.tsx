@@ -9,7 +9,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="border-t border-white/10 mt-20 pt-16 pb-8 bg-black/20 backdrop-blur-sm">
+    <footer className="border-t border-white/10 mt-8 sm:mt-16 pt-8 sm:pt-16 pb-8 bg-black/20 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
           

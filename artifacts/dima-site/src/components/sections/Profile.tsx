@@ -16,9 +16,9 @@ export function Profile() {
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.7 }}
       id="profile"
-      className="glass-card p-8 md:p-10 flex flex-col h-full"
+      className="glass-card p-4 sm:p-6 md:p-10 flex flex-col h-full"
     >
-      <div className="flex items-center gap-4 mb-8">
+      <div className="flex items-center gap-4 mb-4 sm:mb-8">
         <div className="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center">
           <span className="font-display font-bold text-xl text-purple-300">P</span>
         </div>
@@ -26,7 +26,7 @@ export function Profile() {
       </div>
 
       <div className="flex-grow flex flex-col items-center text-center">
-        <div className="relative w-48 h-48 md:w-56 md:h-56 mb-8 group">
+        <div className="relative w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 mb-4 sm:mb-8 group">
           <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 blur-md opacity-40 group-hover:opacity-70 transition-opacity duration-500" />
           <img
             src={`${import.meta.env.BASE_URL}artist-hero.png`}

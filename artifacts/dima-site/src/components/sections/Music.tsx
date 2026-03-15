@@ -19,9 +19,9 @@ export function Music() {
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.7, delay: 0.2 }}
       id="music"
-      className="glass-card p-8 md:p-10 flex flex-col h-full"
+      className="glass-card p-4 sm:p-6 md:p-10 flex flex-col h-full"
     >
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex items-center justify-between mb-4 sm:mb-8">
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
             <span className="font-display font-bold text-xl text-blue-300">M</span>
@@ -78,8 +78,8 @@ export function Music() {
       <div className="mt-auto pt-6 border-t border-white/10">
         <div className="flex items-center justify-between mb-4">
           <span className="text-xs font-mono text-white/50">0:58</span>
-          <div className="flex items-center gap-6">
-            <button className="text-white/40 hover:text-white transition-colors">
+          <div className="flex items-center gap-3 sm:gap-6">
+            <button className="hidden sm:block text-white/40 hover:text-white transition-colors">
               <Shuffle className="w-4 h-4" />
             </button>
             <button className="text-white/60 hover:text-white transition-colors">
@@ -87,18 +87,18 @@ export function Music() {
             </button>
             <button 
               onClick={() => setIsPlaying(!isPlaying)}
-              className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white shadow-lg shadow-purple-500/25 hover:scale-105 transition-transform"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white shadow-lg shadow-purple-500/25 hover:scale-105 transition-transform"
             >
               {isPlaying ? (
-                <Pause className="w-5 h-5 fill-current" />
+                <Pause className="w-4 h-4 sm:w-5 sm:h-5 fill-current" />
               ) : (
-                <Play className="w-5 h-5 fill-current ml-1" />
+                <Play className="w-4 h-4 sm:w-5 sm:h-5 fill-current ml-0.5" />
               )}
             </button>
             <button className="text-white/60 hover:text-white transition-colors">
               <SkipForward className="w-5 h-5 fill-current" />
             </button>
-            <button className="text-white/40 hover:text-white transition-colors">
+            <button className="hidden sm:block text-white/40 hover:text-white transition-colors">
               <Repeat className="w-4 h-4" />
             </button>
           </div>

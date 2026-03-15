@@ -15,17 +15,17 @@ export default function Home() {
         <Hero />
         
         {/* Main Content Grid */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-6 sm:py-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8">
             
             {/* Left Column */}
-            <div className="flex flex-col gap-8 md:gap-12">
+            <div className="flex flex-col gap-4 sm:gap-8">
               <Profile />
               <Gallery />
             </div>
             
             {/* Right Column */}
-            <div className="flex flex-col gap-8 md:gap-12">
+            <div className="flex flex-col gap-4 sm:gap-8">
               <Music />
               <Contact />
             </div>

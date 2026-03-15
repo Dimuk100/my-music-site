@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="relative flex items-center justify-center pt-28 pb-16 overflow-hidden">
+    <section className="relative flex items-center justify-center pt-20 sm:pt-28 pb-8 sm:pb-16 overflow-hidden">
       {/* Background glow effects specific to hero */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-600/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />

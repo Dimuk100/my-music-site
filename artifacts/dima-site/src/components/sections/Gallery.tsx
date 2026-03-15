@@ -15,9 +15,9 @@ export function Gallery() {
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.7 }}
       id="gallery"
-      className="glass-card p-8 md:p-10 flex flex-col h-full"
+      className="glass-card p-4 sm:p-6 md:p-10 flex flex-col h-full"
     >
-      <div className="flex items-center gap-4 mb-8">
+      <div className="flex items-center gap-4 mb-4 sm:mb-8">
         <div className="w-12 h-12 rounded-full bg-indigo-500/20 flex items-center justify-center">
           <span className="font-display font-bold text-xl text-indigo-300">G</span>
         </div>
