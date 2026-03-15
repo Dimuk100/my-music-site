@@ -22,17 +22,16 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-gradient leading-[1.1] mb-6"
+          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-gradient leading-[1.15] mb-4 sm:mb-6"
         >
-          Dima <br/>
-          Vardzelashvili
+          Dima Vardzelashvili
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="text-xl md:text-2xl text-white/60 mb-10 max-w-2xl font-light"
+          className="text-base sm:text-xl md:text-2xl text-white/60 mb-6 sm:mb-10 max-w-2xl font-light"
         >
           Musician <span className="mx-2 text-purple-400">•</span> Composer <span className="mx-2 text-blue-400">•</span> Creator
         </motion.p>
