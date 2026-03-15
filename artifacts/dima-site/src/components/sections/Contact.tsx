@@ -2,10 +2,12 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import { useContact } from "@/hooks/use-contact";
+import { useLang } from "@/contexts/LanguageContext";
 
 export function Contact() {
   const { sendMessage, isSubmitting } = useContact();
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const { t } = useLang();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,58 +29,58 @@ export function Contact() {
         <div className="w-12 h-12 rounded-full bg-pink-500/20 flex items-center justify-center">
           <span className="font-display font-bold text-xl text-pink-300">C</span>
         </div>
-        <h2 className="text-3xl font-display font-bold text-white">Contact Me</h2>
+        <h2 className="text-2xl sm:text-3xl font-display font-bold text-white">{t.contact.title}</h2>
       </div>
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-5 flex-grow">
-        <div className="space-y-2">
-          <label htmlFor="name" className="text-sm font-medium text-white/60 ml-1">Your Name</label>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 flex-grow">
+        <div className="space-y-1.5">
+          <label htmlFor="name" className="text-sm font-medium text-white/60 ml-1">{t.contact.name}</label>
           <input
             id="name"
             type="text"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            placeholder="John Doe"
+            placeholder={t.contact.namePlaceholder}
             required
-            className="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-purple-500/50 focus:bg-white/10 transition-all duration-300"
+            className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-purple-500/50 focus:bg-white/10 transition-all duration-300 text-sm"
           />
         </div>
-        
-        <div className="space-y-2">
-          <label htmlFor="email" className="text-sm font-medium text-white/60 ml-1">Your Email</label>
+
+        <div className="space-y-1.5">
+          <label htmlFor="email" className="text-sm font-medium text-white/60 ml-1">{t.contact.email}</label>
           <input
             id="email"
             type="email"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            placeholder="john@example.com"
+            placeholder={t.contact.emailPlaceholder}
             required
-            className="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-purple-500/50 focus:bg-white/10 transition-all duration-300"
+            className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-purple-500/50 focus:bg-white/10 transition-all duration-300 text-sm"
           />
         </div>
-        
-        <div className="space-y-2 flex-grow flex flex-col">
-          <label htmlFor="message" className="text-sm font-medium text-white/60 ml-1">Your Message</label>
+
+        <div className="space-y-1.5 flex-grow flex flex-col">
+          <label htmlFor="message" className="text-sm font-medium text-white/60 ml-1">{t.contact.message}</label>
           <textarea
             id="message"
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-            placeholder="Let's create something together..."
+            placeholder={t.contact.messagePlaceholder}
             required
-            className="w-full flex-grow min-h-[120px] px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-purple-500/50 focus:bg-white/10 transition-all duration-300 resize-none"
+            className="w-full flex-grow min-h-[100px] sm:min-h-[120px] px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-purple-500/50 focus:bg-white/10 transition-all duration-300 resize-none text-sm"
           />
         </div>
 
         <button
           type="submit"
           disabled={isSubmitting}
-          className="button-primary mt-2 flex items-center justify-center gap-2"
+          className="button-primary mt-1 flex items-center justify-center gap-2 text-sm"
         >
           {isSubmitting ? (
-            <span className="animate-pulse">Sending...</span>
+            <span className="animate-pulse">{t.contact.send}...</span>
           ) : (
             <>
-              Send Message
+              {t.contact.send}
               <Send className="w-4 h-4 ml-1" />
             </>
           )}

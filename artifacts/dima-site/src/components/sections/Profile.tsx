@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { Instagram, Youtube, Music2, Video } from "lucide-react";
+import { useLang } from "@/contexts/LanguageContext";
 
 export function Profile() {
+  const { t } = useLang();
+
   const socials = [
     { name: "Instagram", icon: Instagram, url: "#", color: "hover:text-pink-500" },
     { name: "YouTube", icon: Youtube, url: "#", color: "hover:text-red-500" },
@@ -22,7 +25,7 @@ export function Profile() {
         <div className="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center">
           <span className="font-display font-bold text-xl text-purple-300">P</span>
         </div>
-        <h2 className="text-3xl font-display font-bold text-white">Artist Profile</h2>
+        <h2 className="text-2xl sm:text-3xl font-display font-bold text-white">{t.profile.title}</h2>
       </div>
 
       <div className="flex-grow flex flex-col items-center text-center">
@@ -35,11 +38,11 @@ export function Profile() {
           />
         </div>
 
-        <p className="text-lg text-white/80 leading-relaxed mb-8 max-w-sm">
-          Dima Vardzelashvili is an accomplished <span className="text-white font-medium">musician, singer, songwriter</span> and creator!
+        <p className="text-base text-white/80 leading-relaxed mb-6 max-w-sm">
+          {t.profile.bio}
         </p>
 
-        <div className="mt-auto pt-6 border-t border-white/10 w-full flex justify-center gap-6">
+        <div className="mt-auto pt-5 border-t border-white/10 w-full flex justify-center gap-5">
           {socials.map((social) => {
             const Icon = social.icon;
             return (

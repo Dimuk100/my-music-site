@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useLang } from "@/contexts/LanguageContext";
 
 export function Gallery() {
+  const { t } = useLang();
+
   const images = [
     { id: 1, src: `${import.meta.env.BASE_URL}images/gallery-1.png`, alt: "Piano performance" },
     { id: 2, src: `${import.meta.env.BASE_URL}images/gallery-2.png`, alt: "Live guitar" },
@@ -21,17 +24,15 @@ export function Gallery() {
         <div className="w-12 h-12 rounded-full bg-indigo-500/20 flex items-center justify-center">
           <span className="font-display font-bold text-xl text-indigo-300">G</span>
         </div>
-        <h2 className="text-3xl font-display font-bold text-white">Gallery</h2>
+        <h2 className="text-2xl sm:text-3xl font-display font-bold text-white">{t.gallery.title}</h2>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 h-full">
-        {images.map((img, index) => (
+      <div className="grid grid-cols-2 gap-3 sm:gap-4">
+        {images.map((img) => (
           <motion.div
             key={img.id}
             whileHover={{ scale: 1.02 }}
-            className={`relative rounded-2xl overflow-hidden group bg-white/5 ${
-              index === 0 || index === 3 ? "aspect-square" : "aspect-[4/5]"
-            }`}
+            className="relative rounded-xl sm:rounded-2xl overflow-hidden group bg-white/5 aspect-square"
           >
             <img
               src={img.src}
