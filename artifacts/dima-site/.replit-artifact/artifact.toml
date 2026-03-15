@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Dima Vardzelashvili - Music Artist"
+version = "1.0.0"
+id = "artifacts/dima-site"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 23618
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/dima-site run dev"
+
+[services.env]
+PORT = "23618"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/dima-site", "run", "build"]
+publicDir = "artifacts/dima-site/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"

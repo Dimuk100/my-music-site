@@ -1,0 +1,23 @@
+packages:
+  "framer-motion": "For stunning scroll animations and page transitions"
+  "clsx": "For conditional class names in custom components"
+  "tailwind-merge": "For merging tailwind classes in custom components"
+
+images:
+  - path: "artifacts/dima-site/public/images/gallery-1.png"
+    description: "Moody cinematic photography of a musician playing a grand piano on stage, dramatic purple and blue concert lighting, highly detailed"
+    aspect_ratio: "1:1"
+  - path: "artifacts/dima-site/public/images/gallery-2.png"
+    description: "Silhouette of a guitarist performing live on stage back-lit by intense blue laser lights, energetic concert atmosphere"
+    aspect_ratio: "1:1"
+  - path: "artifacts/dima-site/public/images/gallery-3.png"
+    description: "Massive concert crowd from the perspective of the stage, glowing phones in the air, deep indigo and violet stadium lighting"
+    aspect_ratio: "1:1"
+  - path: "artifacts/dima-site/public/images/gallery-4.png"
+    description: "Professional music recording studio mixing console, softly lit by neon purple and blue LED strips, shallow depth of field"
+    aspect_ratio: "1:1"
+
+notes:
+  - No backend available, making this a pure frontend single-page application.
+  - Using framer-motion for premium interactive feel.
+  - Relying on local artist-hero.png for the main artist portrait as requested.
