@@ -1,38 +1,74 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Dima Vardzelashvili - Music Artist</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dima Vardzelashvili - Music Artist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png" />
-    <link rel="apple-touch-icon" href="images/logo.png" />
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Dima Vardzelashvili</h1>
+    <p>Musician • Composer • Creator</p>
+    <button>Listen Music</button>
+    <button>Follow</button>
+  </header>
 
-    <!-- Open Graph preview -->
-    <meta property="og:image" content="images/opengraph.jpg">
-    <meta property="og:title" content="Dima Vardzelashvili - Music Artist">
-    <meta property="og:description" content="Original compositions and unforgettable melodies.">
+  <!-- Profile -->
+  <section id="profile">
+    <img src="images/artist-hero.png" alt="Artist portrait">
+    <p>ბიოგრაფია ქართულად...</p>
+    <!-- social icons -->
+  </section>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Music -->
+  <section id="music">
+    <h2>Music</h2>
+    <ul>
+      <li>You Light My Days – 3:20</li>
+      <li>New Melody – 2:54</li>
+    </ul>
+    <!-- player -->
+  </section>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <img src="images/gallery-1.png" alt="">
+    <img src="images/gallery-2.png" alt="">
+    <img src="images/gallery-3.png" alt="">
+    <img src="images/gallery-4.png" alt="">
+  </section>
 
-    <!-- JS -->
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <header>
-      <img src="images/logo.png" alt="Logo">
-      <h1>Welcome to DimaVerse 🎶</h1>
-    </header>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-    <main>
-      <p>Original music, soul‑stirring melodies, and unforgettable journeys through sound.</p>
-    </main>
-  </body>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Dima Vardzelashvili | All Rights Reserved</p>
+    <form>
+      <input type="email" placeholder="Share your Newsletter">
+      <button type="submit">Subscribe</button>
+    </form>
+  </footer>
+</body>
 </html>
