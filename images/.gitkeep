@@ -1,1 +1,4 @@
 <img src="images/logo.png" alt="Logo">
+<img src="images/logo.png" alt="Logo">
+<link rel="icon" href="images/favicon.ico">
+<meta property="og:image" content="images/opengraph.jpg">
