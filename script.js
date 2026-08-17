@@ -1,29 +1,33 @@
-// მარტივი მუსიკის პლეერი
-const tracks = [
-  { title: "You Light My Days", src: "music/you-light-my-days.mp3" },
-  { title: "New Melody", src: "music/new-melody.mp3" }
-];
+// Dark Mode Toggle
+document.getElementById("darkToggle").addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
 
-let currentTrack = 0;
-const audio = new Audio(tracks[currentTrack].src);
+// Music Player
+const audio = new Audio("music/you-light-my-days.mp3");
+const playBtn = document.getElementById("playBtn");
+const pauseBtn = document.getElementById("pauseBtn");
+const nextBtn = document.getElementById("nextBtn");
+const progressBar = document.getElementById("progressBar");
+const timeDisplay = document.getElementById("timeDisplay");
 
-function playMusic() {
-  audio.play();
-}
+playBtn.addEventListener("click", () => audio.play());
+pauseBtn.addEventListener("click", () => audio.pause());
+nextBtn.addEventListener("click", () => audio.src = "music/new-melody.mp3");
 
-function pauseMusic() {
-  audio.pause();
-}
+audio.addEventListener("timeupdate", () => {
+  const progress = (audio.currentTime / audio.duration) * 100;
+  progressBar.value = progress;
+  timeDisplay.textContent = `${Math.floor(audio.currentTime/60)}:${Math.floor(audio.currentTime%60)} / ${Math.floor(audio.duration/60)}:${Math.floor(audio.duration%60)}`;
+});
 
-function nextTrack() {
-  currentTrack = (currentTrack + 1) % tracks.length;
-  audio.src = tracks[currentTrack].src;
-  audio.play();
-}
-
-// ღილაკების მიბმა
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#playBtn").addEventListener("click", playMusic);
-  document.querySelector("#pauseBtn").addEventListener("click", pauseMusic);
-  document.querySelector("#nextBtn").addEventListener("click", nextTrack);
+// Contact Form Validation
+document.getElementById("contactForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const email = e.target.querySelector("input[type=email]").value;
+  if(!email.includes("@")) {
+    alert("Please enter a valid email!");
+  } else {
+    alert("Message sent successfully!");
+  }
 });
