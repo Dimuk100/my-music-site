@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dima Vardzelashvili</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark bg-gradient-to-b from-purple-900 to-blue-900 text-white">
+<body class="dark">
 
   <!-- Navigation -->
-  <nav class="flex justify-between items-center p-4 fixed w-full bg-black/40 z-50">
-    <h2 class="font-display text-xl">🎼 Dima Vardzelashvili</h2>
-    <ul class="flex gap-6">
+  <nav class="navbar">
+    <h2>🎼 Dima Vardzelashvili</h2>
+    <ul>
       <li><a href="#profile">Profile</a></li>
       <li><a href="#music">Music</a></li>
       <li><a href="#gallery">Gallery</a></li>
@@ -21,20 +21,20 @@
   </nav>
 
   <!-- Hero -->
-  <header class="h-[600px] flex flex-col justify-center items-center text-center">
-    <h1 class="text-5xl font-display mb-2">Dima Vardzelashvili</h1>
-    <p class="text-lg mb-6">Musician • Composer • Creator</p>
-    <div class="flex gap-4">
+  <header class="hero">
+    <h1>Dima Vardzelashvili</h1>
+    <p>Musician • Composer • Creator</p>
+    <div class="buttons">
       <button class="btn-primary">Listen Music</button>
       <button class="btn-secondary">Follow</button>
     </div>
   </header>
 
   <!-- Profile -->
-  <section id="profile" class="py-12 text-center">
-    <img src="images/profile.png" alt="Artist portrait" class="mx-auto rounded-2xl w-64 mb-6">
-    <p class="max-w-xl mx-auto">დიმა ვარძელაშვილი — მუსიკოსი და კომპოზიტორი. მისი მუსიკა აერთიანებს ემოციას, ენერგიას და თანამედროვე ჟღერადობას.</p>
-    <div class="flex justify-center gap-6 mt-6">
+  <section id="profile" class="panel">
+    <img src="images/profile.png" alt="Artist portrait">
+    <p>დიმა ვარძელაშვილი — მუსიკოსი და კომპოზიტორი. მისი მუსიკა აერთიანებს ემოციას, ენერგიას და თანამედროვე ჟღერადობას.</p>
+    <div class="social">
       <a href="#">Instagram</a>
       <a href="#">YouTube</a>
       <a href="#">Spotify</a>
@@ -43,25 +43,25 @@
   </section>
 
   <!-- Music -->
-  <section id="music" class="py-12 text-center bg-black/30">
-    <h2 class="text-3xl mb-6">Music</h2>
-    <ul class="space-y-4">
+  <section id="music" class="panel">
+    <h2>Music</h2>
+    <ul>
       <li>You Light My Days – 3:20</li>
       <li>New Melody – 2:54</li>
     </ul>
-    <div class="mt-6 flex gap-4 justify-center">
-      <button id="playBtn" class="btn-primary">Play ▶</button>
-      <button id="pauseBtn" class="btn-secondary">Pause ⏸</button>
-      <button id="nextBtn" class="btn-tertiary">Next ⏭</button>
+    <div class="player">
+      <button id="playBtn">Play ▶</button>
+      <button id="pauseBtn">Pause ⏸</button>
+      <button id="nextBtn">Next ⏭</button>
     </div>
-    <input id="progressBar" type="range" value="0" max="100" class="w-1/2 mt-4">
+    <input id="progressBar" type="range" value="0" max="100">
     <p id="timeDisplay">0:00 / 3:20</p>
   </section>
 
   <!-- Gallery -->
-  <section id="gallery" class="py-12 text-center">
-    <h2 class="text-3xl mb-6">Gallery</h2>
-    <div class="grid grid-cols-2 gap-6 max-w-5xl mx-auto">
+  <section id="gallery" class="panel">
+    <h2>Gallery</h2>
+    <div class="grid">
       <img src="images/gallery-1.png" alt="">
       <img src="images/gallery-2.png" alt="">
       <img src="images/gallery-3.png" alt="">
@@ -70,22 +70,22 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-12 text-center bg-black/40">
-    <h2 class="text-3xl mb-6">Contact Me</h2>
-    <form id="contactForm" class="flex flex-col gap-4 max-w-md mx-auto">
-      <input type="text" placeholder="Your Name" class="input">
-      <input type="email" placeholder="Your Email" class="input">
-      <textarea placeholder="Your Message" class="input"></textarea>
-      <button type="submit" class="btn-primary">Send Message</button>
+  <section id="contact" class="panel">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
     </form>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-black/80 py-6 text-center">
+  <footer>
     <p>© 2025 Dima Vardzelashvili | All Rights Reserved</p>
-    <form class="flex justify-center gap-2 mt-4">
-      <input type="email" placeholder="Share your Newsletter" class="input">
-      <button type="submit" class="btn-secondary">Subscribe</button>
+    <form>
+      <input type="email" placeholder="Share your Newsletter">
+      <button type="submit">Subscribe</button>
     </form>
   </footer>
 
