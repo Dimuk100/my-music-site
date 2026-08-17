@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dima Vardzelashvili - Music Artist</title>
+  <title>DimaVerse</title>
+  <!-- CSS ფაილი -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-[#060612] text-white">
@@ -49,9 +50,10 @@
       <li>You Light My Days – 3:20</li>
       <li>New Melody – 2:54</li>
     </ul>
-    <!-- Placeholder for player -->
-    <div class="mt-6">
-      <button class="px-6 py-2 bg-blue-500/20 rounded-lg">Play ▶</button>
+    <div class="mt-6 flex gap-4 justify-center">
+      <button id="playBtn" class="px-6 py-2 bg-blue-500/20 rounded-lg">Play ▶</button>
+      <button id="pauseBtn" class="px-6 py-2 bg-purple-600/20 rounded-lg">Pause ⏸</button>
+      <button id="nextBtn" class="px-6 py-2 bg-pink-500/20 rounded-lg">Next ⏭</button>
     </div>
   </section>
 
@@ -86,5 +88,7 @@
     </form>
   </footer>
 
+  <!-- JS ფაილი -->
+  <script src="script.js"></script>
 </body>
 </html>
