@@ -1,6 +1,6 @@
 // Dark Mode Toggle
 document.getElementById("darkToggle").addEventListener("click", () => {
-  document.body.classList.toggle("dark");
+  document.body.classList.toggle("light");
 });
 
 // Music Player
@@ -13,7 +13,10 @@ const timeDisplay = document.getElementById("timeDisplay");
 
 playBtn.addEventListener("click", () => audio.play());
 pauseBtn.addEventListener("click", () => audio.pause());
-nextBtn.addEventListener("click", () => audio.src = "music/new-melody.mp3");
+nextBtn.addEventListener("click", () => {
+  audio.src = "music/new-melody.mp3";
+  audio.play();
+});
 
 audio.addEventListener("timeupdate", () => {
   const progress = (audio.currentTime / audio.duration) * 100;
